@@ -14,12 +14,12 @@
 这是最简单的一种认证方式，通过简单设置 HTTP 请求头 `Authorization: Basic xxxyyyzzz==` 即可实现认证，访问 Halo API，例如：
 
 ```bash
-╰─❯ curl -u "admin:P@88w0rd" -H "Accept: application/json" http://localhost:8090/api/v1alpha1/users
+╰─❯ curl -u "admin:P@88w0rd" -H "Accept: application/json" http://localhost:32330/api/v1alpha1/users
 
 或者
 ╰─❯ echo -n "admin:P@88w0rd" | base64
 YWRtaW46UEA4OHcwcmQ=
-╰─❯ curl -H "Authorization: Basic YWRtaW46UEA4OHcwcmQ=" -H "Accept: application/json" http://localhost:8090/api/v1alpha1/users
+╰─❯ curl -H "Authorization: Basic YWRtaW46UEA4OHcwcmQ=" -H "Accept: application/json" http://localhost:32330/api/v1alpha1/users
 ```
 
 ## 表单认证
@@ -40,7 +40,7 @@ YWRtaW46UEA4OHcwcmQ=
   仅在请求头 `Accept` 中包含 `application/json` 时发生，响应示例如下所示：
 
     ```bash
-    ╰─❯ curl 'http://localhost:8090/login' \
+    ╰─❯ curl 'http://localhost:32330/login' \
       -H 'Accept: application/json' \
       -H 'Cookie: XSRF-TOKEN=1ff67e0c-6f2c-4cf9-afb5-81bc1015b8e5' \
       -H 'Content-Type: application/x-www-form-urlencoded' \
@@ -84,7 +84,7 @@ YWRtaW46UEA4OHcwcmQ=
   仅在请求头 `Accept` 中不包含 `application/json`才会发生，响应示例如下所示：
 
   ```bash
-  ╰─❯ curl 'http://localhost:8090/login' \
+  ╰─❯ curl 'http://localhost:32330/login' \
     -H 'Accept: */*' \
     -H 'Cookie: XSRF-TOKEN=1ff67e0c-6f2c-4cf9-afb5-81bc1015b8e5' \
     -H 'Content-Type: application/x-www-form-urlencoded' \

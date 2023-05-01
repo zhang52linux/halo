@@ -28,10 +28,10 @@
 docker run \
   -it -d \
   --name halo \
-  -p 8090:8090 \
+  -p 32330:32330 \
   -v ~/.halo2:/root/.halo2 \
   halohub/halo:2.4 \
-  --halo.external-url=http://localhost:8090/ \
+  --halo.external-url=http://localhost:32330/ \
   --halo.security.initializer.superadminusername=admin \
   --halo.security.initializer.superadminpassword=P@88w0rd
 ```

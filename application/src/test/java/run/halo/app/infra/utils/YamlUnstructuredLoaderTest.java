@@ -50,7 +50,7 @@ class YamlUnstructuredLoaderTest {
 
         notSpecYaml = """
             server:
-              port: 8090
+              port: 32330
             spring:
               jackson:
                 date-format: yyyy-MM-dd HH:mm:ss

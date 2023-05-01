@@ -16,7 +16,7 @@ public class ConsoleProperties {
     public static class ProxyProperties {
 
         /**
-         * Console endpoint in development environment to be proxied. e.g.: http://localhost:8090/
+         * Console endpoint in development environment to be proxied. e.g.: http://localhost:32330/
          */
         private URI endpoint;
 

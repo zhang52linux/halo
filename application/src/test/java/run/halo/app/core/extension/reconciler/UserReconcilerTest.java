@@ -59,7 +59,7 @@ class UserReconcilerTest {
 
     @Test
     void permalinkForFakeUser() throws URISyntaxException {
-        when(externalUrlSupplier.get()).thenReturn(new URI("http://localhost:8090"));
+        when(externalUrlSupplier.get()).thenReturn(new URI("http://localhost:32330"));
 
         when(client.fetch(eq(User.class), eq("fake-user")))
             .thenReturn(Optional.of(user("fake-user")));
@@ -69,7 +69,7 @@ class UserReconcilerTest {
         ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
         verify(client, times(2)).update(captor.capture());
         assertThat(captor.getValue().getStatus().getPermalink())
-            .isEqualTo("http://localhost:8090/authors/fake-user");
+            .isEqualTo("http://localhost:32330/authors/fake-user");
     }
 
     @Test

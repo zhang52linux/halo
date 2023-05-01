@@ -119,7 +119,7 @@ class ThemeLinkBuilderTest {
         assertThat(ThemeLinkBuilder.linkInSite(uri, "https://halo.run/hello/world")).isFalse();
 
         // port is different
-        uri = new URI("http://localhost:8090");
+        uri = new URI("http://localhost:32330");
         assertThat(ThemeLinkBuilder.linkInSite(uri, "http://localhost:3000")).isFalse();
     }
 

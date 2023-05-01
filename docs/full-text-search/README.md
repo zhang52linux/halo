@@ -23,7 +23,7 @@ Halo 也可以学习 Hibernate 适配多种搜索引擎，如 Lucene、ElasticSe
 例如：
 
 ```bash
-http://localhost:8090/apis/api.halo.run/v1alpha1/posts?keyword=halo&sort=title.asc&sort=publishTimestamp,desc&offset=20&limit=10
+http://localhost:32330/apis/api.halo.run/v1alpha1/posts?keyword=halo&sort=title.asc&sort=publishTimestamp,desc&offset=20&limit=10
 ```
 
 ### 搜索结果
